@@ -1,7 +1,8 @@
 :root {
   --main-bg-color: #222;
+  --primary-color: #e91e63;
   --main-font-color: #ffeb3b;
-  --second-font-color: #3d3d3d;
+  --second-font-color: #fcfcfc;
 }
 
 * {
@@ -18,9 +19,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -45,6 +50,7 @@ body {
   text-decoration: none;
   color: var(--main-font-color);
   font-size: 1.6rem;
+  text-transform: uppercase;
   display: block;
   padding: 10px 15px;
   position: relative;
@@ -85,5 +91,68 @@ body {
 .first-menu__link:hover::before, .first-menu__link:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
+}
+
+.second-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+.second-menu__link {
+  color: var(--second-font-color);
+  font-size: 1.6rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  margin: 0rem 1rem;
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.second-menu__link:hover {
+  background-color: var(--primary-color);
+}
+
+.second-menu__link::before {
+  content: "";
+  position: absolute;
+  bottom: 1.2rem;
+  left: 1.2rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 0.3rem solid var(--primary-color);
+  border-width: 0 0 0.3rem 0.3rem;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.second-menu__link:hover::before {
+  opacity: 1;
+  bottom: -0.8rem;
+  left: -0.8rem;
+}
+
+.second-menu__link:hover::after {
+  opacity: 1;
+  top: -0.8rem;
+  right: -0.8rem;
+}
+
+.second-menu__link::after {
+  content: "";
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 0.3rem solid var(--primary-color);
+  border-width: 0.3rem 0.3rem 0 0;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 /*# sourceMappingURL=style.css.map */
