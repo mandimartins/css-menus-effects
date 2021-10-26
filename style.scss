@@ -80,7 +80,7 @@ body {
   list-style-type: none;
 
   &__link {
-    color: var(--second-font-color);
+    color: var(--primary-color);
     font-size: 1.6rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -91,6 +91,7 @@ body {
 
     &:hover {
       background-color: var(--primary-color);
+      color: var(--second-font-color);
     }
 
     &::before {
