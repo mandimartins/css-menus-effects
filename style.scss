@@ -12,10 +12,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 62.5%; // this is equal to 10px and 1rem || 10px divided by 16px(defaut) is equal 0.625
 }
 
 body {
-  font-size: 62.5%; // this is equal to 10px and 1rem || 10px divided by 16px(defaut) is equal 0.625
   font-family: "Nunito", sans-serif;
 
   height: 100vh;
@@ -81,6 +81,7 @@ body {
 .second-menu {
   display: flex;
   list-style-type: none;
+  flex-wrap: wrap;
 
   &__link {
     color: var(--primary-color);
@@ -139,6 +140,7 @@ body {
 .third-menu {
   display: flex;
   list-style-type: none;
+  flex-wrap: wrap;
 
   &__link {
     display: block;
@@ -184,6 +186,20 @@ body {
 
     &:hover span {
       transform: scaleY(1);
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    font-size: 30%;
+  }
+
+  .menu {
+    flex-direction: column;
+
+    li {
+      margin: 1rem 0;
     }
   }
 }

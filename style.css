@@ -13,10 +13,10 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 body {
-  font-size: 62.5%;
   font-family: "Nunito", sans-serif;
   height: 100vh;
   display: -webkit-box;
@@ -101,6 +101,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .second-menu__link {
@@ -165,6 +167,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .third-menu__link {
@@ -223,5 +227,20 @@ body {
 .third-menu__link:hover span {
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
+}
+
+@media (max-width: 900px) {
+  body {
+    font-size: 30%;
+  }
+  .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .menu li {
+    margin: 1rem 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
