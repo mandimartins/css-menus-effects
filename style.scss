@@ -190,16 +190,60 @@ body {
   }
 }
 
-@media (max-width: 900px) {
-  body {
-    font-size: 30%;
+.fourth-menu {
+  display: flex;
+
+  &__item {
+    list-style-type: none;
   }
+  &__link {
+    font-size: 1.6rem;
+    position: relative;
+    display: block;
+    padding: 1.5rem 3rem;
+    margin: 0 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--tertiary-color);
 
-  .menu {
-    flex-direction: column;
-
-    li {
-      margin: 1rem 0;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-top: 0.2rem solid var(--tertiary-color);
+      border-left: 0.2rem solid var(--tertiary-color);
+      transition: all 0.5s;
+      box-sizing: border-box;
+      transform-origin: left;
     }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      border-bottom: 0.2rem solid var(--tertiary-color);
+      border-right: 0.2rem solid var(--tertiary-color);
+      transition: all 0.5s;
+      box-sizing: border-box;
+      transform-origin: right;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      width: 1.5rem;
+      height: 1.5rem;
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  * {
+    font-size: 40%;
   }
 }
