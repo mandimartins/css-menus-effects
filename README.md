@@ -1,4 +1,4 @@
-# css-menus-effects
+# Nice hover effects
 
 Transform effects on hover
 
