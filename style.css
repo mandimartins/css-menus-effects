@@ -1,8 +1,11 @@
 :root {
   --main-bg-color: #222;
   --primary-color: #e91e63;
+  --secondary-color: #61dafb;
+  --tertiary-color: #41b883;
   --main-font-color: #ffeb3b;
   --second-font-color: #fcfcfc;
+  --tertiary-font-color: #555;
 }
 
 * {
@@ -155,5 +158,70 @@ body {
   opacity: 0;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+}
+
+.third-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+.third-menu__link {
+  display: block;
+  font-size: 1.6rem;
+  width: 12rem;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.third-menu__link span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  z-index: -1;
+  left: 0;
+  top: 0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.third-menu__link span:nth-child(2) {
+  left: 25%;
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+}
+
+.third-menu__link span:nth-child(3) {
+  left: 50%;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.third-menu__link span:nth-child(4) {
+  -webkit-transition-delay: 0.45s;
+          transition-delay: 0.45s;
+  left: 75%;
+}
+
+.third-menu__link:hover {
+  color: var(--tertiary-font-color);
+}
+
+.third-menu__link:hover span {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
 }
 /*# sourceMappingURL=style.css.map */
